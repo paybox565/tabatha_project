@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {ITreeNode} from "./itree-node";
 
 @Component({
   selector: 'app-root',

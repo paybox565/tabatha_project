@@ -1,0 +1,9 @@
+<div>
+  <div><button [routerLink]="['/']" class="btn">Home</button>   </div>
+  <input type="text" class="form-control" [(ngModel)]="positionName">
+  <input type="text" class="form-control" [(ngModel)]="price">
+  <select name="" [(ngModel)]="parentId">
+    <option *ngFor="let part of parts" [value]="part.id">{{part.name}}</option>
+  </select>
+  <button class="btn" (click)="addPosition()">Add</button>
+</div>
