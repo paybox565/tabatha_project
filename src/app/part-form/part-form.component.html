@@ -1,5 +1,8 @@
 <div>
-  <input type="text" class="form-control">
-  <input type="text" class="form-control">
-  <button class="btn">Add</button>
+  <div><button [routerLink]="['/']" class="btn">Home</button>   </div>
+  <input type="text" class="form-control" [(ngModel)]="partName">
+  <select name="" [(ngModel)]="parentId">
+    <option *ngFor="let part of parts" [value]="part.id">{{part.name}}</option>
+  </select>
+  <button class="btn" (click)="addPart()">Add</button>
 </div>

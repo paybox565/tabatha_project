@@ -1,9 +1,10 @@
 <ul *ngIf="treeData">
   <li *ngFor="let node of treeData">
-    <span class="tree-title" (click)="toggleChild(node)">
-      <span *ngIf="node.items"><b>+</b> &nbsp;</span>
-      <span>{{ node.name }}</span>
-    </span>
+  <span class="tree-title" (click)="toggleChild(node)">
+    <span *ngIf="node.items"><b>+</b> &nbsp;</span>
+    <span>{{ node.name }}</span>
+  </span>
     <app-parts-list *ngIf="node.showChildren" [treeData]="node.items"></app-parts-list>
   </li>
 </ul>
+
